@@ -1,0 +1,5 @@
+package com.te.lambda.dto;
+
+public class BookMain {
+
+}

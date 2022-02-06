@@ -1,0 +1,31 @@
+package com.te.MappingManyTOMany.dao;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityTransaction;
+
+import com.te.MappingManyTOMany.bean.Course;
+import com.te.MappingManyTOMany.bean.Student;
+
+public class ManyToManyDriver {
+	public static void main(String[] args) {
+		
+
+	EntityManagerFactory factory=null;
+	EntityManager manager=null;
+	EntityTransaction transaction=null;
+	Student student=new Student();
+	student.setSid(11);
+	student.setSname("vinutha");
+	Student student2=new Student();
+	student2.setSid(12);
+	student2.setSname("abcd");
+	Course course=new Course();
+	course.setCid(22);
+	course.setCourseName("java");
+	Course course2=new Course();
+	course2.setCid(23);
+	course2.setCourseName("python");
+	}
+
+}

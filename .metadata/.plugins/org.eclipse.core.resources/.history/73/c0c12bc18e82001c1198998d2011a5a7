@@ -1,0 +1,9 @@
+package com.te.MappingManyTOMany.bean;
+
+import java.io.Serializable;
+
+public class Course implements Serializable {
+private int cid;
+private String courseName;
+
+}

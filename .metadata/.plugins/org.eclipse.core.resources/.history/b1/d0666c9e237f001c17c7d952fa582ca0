@@ -1,0 +1,81 @@
+package com.tyss.collection.sorting;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class SortingDetails {
+	static Scanner scanner = new Scanner(System.in);
+	static ArrayList<Student> arraylist = new ArrayList<Student>();
+
+	public static void main(String[] args) {
+		do {
+			for (int i = 1; i <= 1; i++) {
+				System.out.println("Enter the Student Id");
+				int id = scanner.nextInt();
+				System.out.println("Enter the Student Name");
+				String name = scanner.next();
+				System.out.println("Enter the Student Marks");
+				int marks = scanner.nextInt();
+				System.out.println("Enter the Student Mobile");
+				long mobileNumber = scanner.nextLong();
+				System.out.println("Enter the Student Gender");
+				String gender = scanner.next();
+				System.out.println("Enter the student age");
+				int age = scanner.nextInt();
+				arraylist.add(new Student(id, name, marks, mobileNumber, gender, age));
+			}
+			System.out.println("Enter the Choice \n1.Add Data \n2.exit");
+		} while (scanner.nextInt() == 1);
+		do {
+			System.out.println(
+					"Enter your Choice\n1.SortById\n2.SortByName\n3.SortByName\n4.SortByPhoneNumber\n5.SortByGender\n6.SortByAge");
+			switch (scanner.nextInt()) {
+			case 1: {
+				arraylist.sort((Student s1, Student s2) -> s1.studentId - s2.studentId);
+				System.out.println("Sort By Student Id ");
+				arraylist.forEach((y) -> System.out.println(y.studentId + " " + y.StudentName + " " + y.marks + " "
+						+ y.phoneNumber + " " + y.gender + " " + y.age));
+			}
+				break;
+			case 2: {
+				arraylist.sort((Student s1, Student s2) -> s1.StudentName.compareTo(s2.StudentName));
+				System.out.println("Sort By Student Name");
+				arraylist.forEach((s) -> System.out.println(s.studentId + " " + s.StudentName + " " + s.marks + " "
+						+ s.phoneNumber + " " + s.gender + " " + s.age));
+			}
+				break;
+			case 3: {
+				arraylist.sort((Student s1, Student s2) -> s1.marks - s2.marks);
+				System.out.println("Sort By Marks");
+				arraylist.forEach((s) -> System.out.println(s.studentId + " " + s.StudentName + " " + s.marks + " "
+						+ s.phoneNumber + " " + s.gender + " " + s.age));
+			}
+				break;
+			case 4: {
+				arraylist.sort((Student s1, Student s2) -> (int) s1.phoneNumber - (int) s2.phoneNumber);
+				System.out.println("Sortet by phone number");
+				arraylist.forEach((s) -> System.out.println(s.studentId + " " + s.StudentName + " " + s.marks + " "
+						+ s.phoneNumber + " " + s.gender + " " + s.age));
+			}
+				break;
+			case 5: {
+				arraylist.sort((Student s1, Student s2) -> s1.gender.compareTo(s2.gender));
+				System.out.println("Sort By Gender");
+				arraylist.forEach((s) -> System.out.println(s.studentId + " " + s.StudentName + " " + s.marks + " "
+						+ s.phoneNumber + " " + s.gender + " " + s.age));
+			}
+				break;
+			case 6: {
+				arraylist.sort((Student s1, Student s2) -> s1.age - s2.age);
+				System.out.println("Sort By Age");
+				arraylist.forEach((s) -> System.out.println(s.studentId + " " + s.StudentName + " " + s.marks + " "
+						+ s.phoneNumber + " " + s.gender + " " + s.age));
+			}
+				break;
+			default:
+				System.out.println("Enter the correct options");
+			}
+			System.out.println("Press \n1.Yes\n2.No");
+		} while (scanner.nextInt() == 1);
+	}
+}

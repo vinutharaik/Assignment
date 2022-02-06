@@ -1,0 +1,10 @@
+package com.tyss.collection.sorting;
+
+public class Customer {
+	int cid;
+	String name;
+	String item;
+	
+	
+
+}

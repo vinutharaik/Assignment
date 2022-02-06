@@ -1,0 +1,26 @@
+package com.te.dateformat;
+import java.text.SimpleDateFormat;
+import java.util.*;  
+import java.util.Date;  
+public class SimpleDateFormatExample {  
+public static void main(String[] args) {  
+	/*
+	 * Date date = new Date(); SimpleDateFormat formatter = new
+	 * SimpleDateFormat("dd/MM/yy"); String strDate= formatter.format(date);
+	 * System.out.println(strDate);
+	 */
+    
+    
+    SimpleDateFormat dateInput = new SimpleDateFormat("yyyy-MM-dd");
+    Scanner input = new Scanner(System.in);
+
+    String strDate = input.nextLine();
+
+    try
+    {
+       Date date = dateInput.parse(strDate);
+       System.out.println(new SimpleDateFormat("yyyy-MM-dd").format(date));
+    } 
+   
+}  
+}  

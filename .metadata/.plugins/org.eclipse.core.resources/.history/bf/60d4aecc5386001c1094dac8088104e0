@@ -1,0 +1,5 @@
+package com.te.lambda.dao;
+
+public class BookDao {
+
+}

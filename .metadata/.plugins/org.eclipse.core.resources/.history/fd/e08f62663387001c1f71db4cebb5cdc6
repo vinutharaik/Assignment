@@ -1,0 +1,9 @@
+package logicalprogramming;
+
+public class RemoveWhiteSpace {
+String str="    j  a   v   a   ta  r  ";
+String trimStr=str.trim();
+private void Syso() {
+	// TODO Auto-generated method stub
+
+}
